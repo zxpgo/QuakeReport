@@ -5,10 +5,11 @@ public class Earthquake {
     //地震位置
     private String mLocation;
     //地震级数
-    private String mMagnitude;
+    private double  mMagnitude;
     //地震时间
-    private String mDate;
-
+    private Long  mDate;
+    //地震的网站url
+    private  String mUrl;
 
     /**
      * 构造函数
@@ -17,21 +18,24 @@ public class Earthquake {
      * @param magnitude
      * @param date
      */
-    public Earthquake(String location, String magnitude, String date) {
+    public Earthquake(String location, double magnitude, Long date, String url) {
         mLocation = location;
         mMagnitude = magnitude;
         mDate = date;
+        mUrl = url;
     }
     //获取地址位置
-    public String getmLoaction() {
+    public String getmLocation() {
         return mLocation;
     }
     //获取地震级数
-    public String getmMagnitud() {
+    public double getmMagnitude() {
         return mMagnitude;
     }
     //获取地震时间
-    public String getmDate() {
+    public Long getmDate() {
         return mDate;
     }
+    //获取地震url
+    public  String getmUrl(){return mUrl;}
 }
